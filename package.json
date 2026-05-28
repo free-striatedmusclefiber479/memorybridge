@@ -1,0 +1,70 @@
+{
+  "name": "memorybridge",
+  "version": "0.1.0",
+  "description": "Cross-tool AI memory MCP server for Claude Code, Cursor, Antigravity, Windsurf, and every MCP-compatible AI. One .ai-memory.md per project, 400 tokens not 4,000. Local, plain Markdown, zero cloud.",
+  "license": "MIT",
+  "author": "Prince Ramgarhiaa <princeramgarhiaa@gmail.com>",
+  "homepage": "https://github.com/IamRamgarhia/memorybridge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamRamgarhia/memorybridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IamRamgarhia/memorybridge/issues"
+  },
+  "type": "module",
+  "bin": {
+    "memorybridge": "dist/cli.js",
+    "mb": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/server.js",
+    "cli": "node dist/cli.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "gpt-tokenizer": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SAFETY.md",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "ai-memory",
+    "ai-context",
+    "claude-code",
+    "claude-desktop",
+    "cursor",
+    "antigravity",
+    "windsurf",
+    "gemini-cli",
+    "continue-dev",
+    "copilot",
+    "agents-md",
+    "claude-md",
+    "cursorrules",
+    "ai-cli",
+    "developer-tools",
+    "llm-tools",
+    "token-saver",
+    "context-management",
+    "cross-tool",
+    "vibe-coding"
+  ]
+}

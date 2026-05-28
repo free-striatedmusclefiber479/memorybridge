@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output (included in npm pack via package.json "files", not in git)
+dist/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# MemoryBridge runtime artifacts that might appear in this repo if developers test in-repo
+.ai-memory.md
+.ai-memory.archive.md
+.ai-memory.history/
+
+# Cross-tool memory artifacts (we generate these as examples, but don't commit them)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.windsurfrules
+.continuerules
+.github/copilot-instructions.md
+
+# npm pack artifacts
+*.tgz
