@@ -6,6 +6,7 @@
 [![Node](https://img.shields.io/badge/node-%E2%89%A520-brightgreen.svg)](https://nodejs.org/)
 [![MCP](https://img.shields.io/badge/MCP-compatible-blue.svg)](https://modelcontextprotocol.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
+[![Glama MCP server](https://glama.ai/mcp/servers/IamRamgarhia/memorybridge/badges/score.svg)](https://glama.ai/mcp/servers/IamRamgarhia/memorybridge)
 
 **MemoryBridge** is an MCP (Model Context Protocol) server that gives every AI coding tool you use — **Claude Code, Cursor, Google Antigravity, Windsurf, Gemini CLI, Continue.dev, VS Code Copilot, Claude Desktop** — a shared memory of your project. One Markdown file (`.ai-memory.md`) lives in your project folder. Every AI tool reads it on session start. You stop re-explaining your stack, decisions, and known bugs every time you start a new chat.
 
