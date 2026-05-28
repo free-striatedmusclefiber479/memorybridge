@@ -1,6 +1,7 @@
 {
   "name": "memorybridge",
   "version": "0.1.0",
+  "mcpName": "io.github.IamRamgarhia/memorybridge",
   "description": "Cross-tool AI memory MCP server for Claude Code, Cursor, Antigravity, Windsurf, and every MCP-compatible AI. One .ai-memory.md per project, 400 tokens not 4,000. Local, plain Markdown, zero cloud.",
   "license": "MIT",
   "author": "Prince Ramgarhiaa <princeramgarhiaa@gmail.com>",

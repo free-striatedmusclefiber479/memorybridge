@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.IamRamgarhia/memorybridge",
+  "description": "Cross-tool AI memory MCP server. One .ai-memory.md per project, shared by Claude Code, Cursor, Antigravity, Windsurf, Gemini CLI, Continue, and VS Code Copilot. Default load is ~400 tokens (vs 2,000-5,000 typical). Plain Markdown, zero vector DB, atomic writes. Emits AGENTS.md / CLAUDE.md / .cursorrules / .windsurfrules / GEMINI.md from one source with banner+hash overwrite protection.",
+  "repository": {
+    "url": "https://github.com/IamRamgarhia/memorybridge",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "memorybridge",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
