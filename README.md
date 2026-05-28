@@ -1,12 +1,18 @@
+<p align="center">
+  <img src="docs/images/social-preview.svg" alt="MemoryBridge — Cross-tool AI memory for Claude Code, Cursor, Antigravity, Windsurf, Gemini CLI, and every MCP-compatible AI. 400 tokens instead of 4,000." width="100%">
+</p>
+
 # MemoryBridge — Cross-Tool AI Memory for Claude Code, Cursor, Antigravity & every MCP-compatible AI
 
 > **One file. Every AI. 400 tokens, not 4,000.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node](https://img.shields.io/badge/node-%E2%89%A520-brightgreen.svg)](https://nodejs.org/)
-[![MCP](https://img.shields.io/badge/MCP-compatible-blue.svg)](https://modelcontextprotocol.io/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
-[![Glama MCP server](https://glama.ai/mcp/servers/IamRamgarhia/memorybridge/badges/score.svg)](https://glama.ai/mcp/servers/IamRamgarhia/memorybridge)
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-%E2%89%A520-brightgreen.svg" alt="Node >=20"></a>
+  <a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/MCP-compatible-blue.svg" alt="MCP compatible"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-strict-blue.svg" alt="TypeScript strict"></a>
+  <a href="https://glama.ai/mcp/servers/IamRamgarhia/memorybridge"><img src="https://glama.ai/mcp/servers/IamRamgarhia/memorybridge/badges/score.svg" alt="Glama MCP server score"></a>
+</p>
 
 **MemoryBridge** is an MCP (Model Context Protocol) server that gives every AI coding tool you use — **Claude Code, Cursor, Google Antigravity, Windsurf, Gemini CLI, Continue.dev, VS Code Copilot, Claude Desktop** — a shared memory of your project. One Markdown file (`.ai-memory.md`) lives in your project folder. Every AI tool reads it on session start. You stop re-explaining your stack, decisions, and known bugs every time you start a new chat.
 
@@ -107,6 +113,10 @@ memorybridge undo
 
 ## 📊 Real token savings (measured)
 
+<p align="center">
+  <img src="docs/images/terminal-compare.svg" alt="Terminal screenshot of memorybridge compare showing before/after token counts and cost savings across Haiku, Sonnet, and Opus pricing tiers" width="100%">
+</p>
+
 After 7 calls in a test project:
 
 ```
@@ -127,28 +137,37 @@ At 500 sessions/month on Sonnet, you save roughly **$6.50/month**. At 100 sessio
 
 ## 🔧 How it works
 
+```mermaid
+flowchart TD
+    A["You: 'I prefer TypeScript strict mode'"] -->|AI calls memory_save| B[("📄 .ai-memory.md<br/>in your project folder")]
+    B -->|next session loads| C[Claude Code]
+    B -->|next session loads| D[Cursor]
+    B -->|next session loads| E[Antigravity]
+    B -->|next session loads| F[Windsurf / Gemini CLI / Continue / Copilot]
+
+    C --> G["AI already knows.<br/>~400 tokens of context, not 4,000.<br/>Zero re-explaining."]
+    D --> G
+    E --> G
+    F --> G
+
+    style A fill:#161a22,stroke:#79c0ff,color:#e6edf3
+    style B fill:#0d1117,stroke:#7ee787,color:#e6edf3,stroke-width:3px
+    style C fill:#161a22,stroke:#30363d,color:#e6edf3
+    style D fill:#161a22,stroke:#30363d,color:#e6edf3
+    style E fill:#161a22,stroke:#30363d,color:#e6edf3
+    style F fill:#161a22,stroke:#30363d,color:#e6edf3
+    style G fill:#0d1117,stroke:#fbbf24,color:#fbbf24,stroke-width:2px
 ```
-┌─────────────────────────────────────────────────────────┐
-│                     Your conversation                   │
-│  "I want to use TypeScript strict mode always"          │
-└────────────────────────────────┬────────────────────────┘
-                                 │
-                         AI calls memory_save
-                                 │
-                  ┌──────────────▼──────────────┐
-                  │   .ai-memory.md (local)     │
-                  │   in your project folder    │
-                  └──────────────┬──────────────┘
-                                 │
-              ┌──────────────────┴──────────────────┐
-              │                  │                  │
-         Claude Code         Cursor          Antigravity
-        (next session)   (next session)    (next session)
-              │                  │                  │
-              ▼                  ▼                  ▼
-   All three start their next session knowing your preference.
-   Zero re-explaining. ~400 tokens of context, not 4,000.
-```
+
+---
+
+## 🎛️ One dashboard for everything
+
+<p align="center">
+  <img src="docs/images/settings-dashboard.svg" alt="Terminal screenshot of memorybridge settings showing the response-length slider, savings counter, file paths, connected AI tools, and quick action commands all in one view" width="100%">
+</p>
+
+`memorybridge settings` shows your current style level, savings so far, every file path MemoryBridge knows about, which AI tools are wired up, and the exact command to change each one. Run it any time.
 
 ---
 

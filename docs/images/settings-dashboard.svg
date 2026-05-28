@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1117"/>
+      <stop offset="100%" stop-color="#0a0c11"/>
+    </linearGradient>
+    <filter id="sh2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="20" width="1060" height="760" rx="10" fill="url(#bg2)" stroke="#2a2f3a" stroke-width="1" filter="url(#sh2)"/>
+  <rect x="20" y="20" width="1060" height="32" rx="10" fill="#161a22"/>
+  <rect x="20" y="42" width="1060" height="12" fill="#161a22"/>
+  <circle cx="42" cy="36" r="6" fill="#ff5f57"/>
+  <circle cx="62" cy="36" r="6" fill="#febc2e"/>
+  <circle cx="82" cy="36" r="6" fill="#28c840"/>
+  <text x="550" y="40" text-anchor="middle" fill="#7d8590" font-size="12">memorybridge settings — bash</text>
+
+  <text x="40" y="80" fill="#a3b8ff">$</text>
+  <text x="58" y="80" fill="#d1d9e0">memorybridge settings</text>
+
+  <text x="40" y="115" fill="#7ee787" font-weight="bold">===============================================================</text>
+  <text x="40" y="133" fill="#79c0ff" font-weight="bold">                MemoryBridge — Settings Dashboard</text>
+  <text x="40" y="151" fill="#7ee787" font-weight="bold">===============================================================</text>
+
+  <text x="40" y="185" fill="#fbbf24">┌─ RESPONSE LENGTH</text>
+  <text x="222" y="185" fill="#8b949e">(controls AI reply size — biggest $ saver)</text>
+  <text x="40" y="210" fill="#d1d9e0">    1  </text>
+  <text x="75" y="210" fill="#7ee787" font-weight="bold">ultra-terse</text>
+  <text x="170" y="210" fill="#d1d9e0">   ≤15 words     </text>
+  <text x="300" y="210" fill="#fbbf24">~75% saved</text>
+  <text x="40" y="228" fill="#d1d9e0">    2  </text>
+  <text x="75" y="228" fill="#d1d9e0">concise</text>
+  <text x="170" y="228" fill="#d1d9e0">       ≤60 words     </text>
+  <text x="300" y="228" fill="#fbbf24">~55% saved</text>
+  <text x="40" y="246" fill="#79c0ff" font-weight="bold">  ▶ 3  </text>
+  <text x="75" y="246" fill="#79c0ff" font-weight="bold">balanced</text>
+  <text x="170" y="246" fill="#d1d9e0">      ≤150 words    </text>
+  <text x="300" y="246" fill="#fbbf24">~25% saved</text>
+  <text x="40" y="264" fill="#d1d9e0">    4  </text>
+  <text x="75" y="264" fill="#d1d9e0">detailed</text>
+  <text x="170" y="264" fill="#d1d9e0">      ≤300 words    </text>
+  <text x="300" y="264" fill="#8b949e">~10% saved</text>
+  <text x="40" y="282" fill="#d1d9e0">    5  </text>
+  <text x="75" y="282" fill="#d1d9e0">verbose</text>
+  <text x="170" y="282" fill="#d1d9e0">       no limit      </text>
+  <text x="300" y="282" fill="#8b949e">no savings</text>
+
+  <text x="40" y="320" fill="#fbbf24">┌─ SAVINGS</text>
+  <text x="138" y="320" fill="#8b949e">(how much you've saved so far)</text>
+  <text x="40" y="345" fill="#d1d9e0">  Memory loaded </text>
+  <text x="165" y="345" fill="#7ee787" font-weight="bold">7 time(s)</text>
+  <text x="40" y="363" fill="#d1d9e0">  Tokens served: </text>
+  <text x="170" y="363" fill="#7ee787" font-weight="bold">1,405</text>
+  <text x="40" y="381" fill="#d1d9e0">  Estimated saved (input):  </text>
+  <text x="285" y="381" fill="#fbbf24" font-weight="bold">19,595 tokens (93%)</text>
+
+  <text x="40" y="420" fill="#fbbf24">┌─ WHERE YOUR DATA LIVES</text>
+  <text x="40" y="445" fill="#d1d9e0">  Global folder:</text>
+  <text x="195" y="445" fill="#a3b8ff">~/.memorybridge</text>
+  <text x="40" y="463" fill="#d1d9e0">    - global memory:</text>
+  <text x="195" y="463" fill="#a3b8ff">~/.memorybridge/global.md</text>
+  <text x="40" y="481" fill="#d1d9e0">  Project memory: </text>
+  <text x="195" y="481" fill="#a3b8ff">./.ai-memory.md</text>
+  <text x="430" y="481" fill="#8b949e">(in YOUR project, not ours)</text>
+
+  <text x="40" y="520" fill="#fbbf24">┌─ AI TOOLS CONNECTED</text>
+  <text x="40" y="545" fill="#7ee787">  [✓] Claude Code</text>
+  <text x="40" y="563" fill="#7ee787">  [✓] Cursor</text>
+  <text x="40" y="581" fill="#7ee787">  [✓] Google Antigravity</text>
+  <text x="40" y="599" fill="#7ee787">  [✓] Gemini CLI</text>
+  <text x="40" y="617" fill="#7ee787">  [✓] Claude Desktop</text>
+  <text x="40" y="635" fill="#7ee787">  [✓] VS Code (+ Copilot)</text>
+
+  <text x="40" y="675" fill="#fbbf24">┌─ QUICK ACTIONS</text>
+  <text x="40" y="700" fill="#a3b8ff">  memorybridge shorter</text>
+  <text x="240" y="700" fill="#8b949e">shorter AI responses (save more)</text>
+  <text x="40" y="718" fill="#a3b8ff">  memorybridge savings</text>
+  <text x="240" y="718" fill="#8b949e">see token + $ savings</text>
+  <text x="40" y="736" fill="#a3b8ff">  memorybridge undo</text>
+  <text x="240" y="736" fill="#8b949e">roll back last save</text>
+  <text x="40" y="754" fill="#a3b8ff">  memorybridge compare</text>
+  <text x="240" y="754" fill="#8b949e">side-by-side before/after</text>
+</svg>
