@@ -1,0 +1,36 @@
+node_modules
+dist
+.git
+.github
+.vscode
+.idea
+*.log
+.DS_Store
+Thumbs.db
+
+# MemoryBridge runtime artifacts that may exist during local dev
+.ai-memory.md
+.ai-memory.archive.md
+.ai-memory.history/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.windsurfrules
+.continuerules
+
+# Docs not needed in the image
+README.md
+CHANGELOG.md
+LICENSE
+SAFETY.md
+SECURITY.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+BUILD_PLAN.md
+WHY_AND_HOW.md
+
+# Test artifacts
+coverage
+.nyc_output
+*.tgz
