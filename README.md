@@ -20,6 +20,26 @@
 
 ---
 
+## 📑 Table of contents
+
+- [⚡ Quick install](#-quick-install)
+- [📖 Step-by-step guide (first time using MemoryBridge)](#-step-by-step-guide-first-time-using-memorybridge)
+- [🎯 The problem MemoryBridge solves](#-the-problem-memorybridge-solves)
+- [✨ What you get](#-what-you-get)
+- [🆚 How it compares](#-how-it-compares)
+- [🚀 60-second walkthrough](#-60-second-walkthrough)
+- [📊 Real token savings (measured)](#-real-token-savings-measured)
+- [🔧 How it works](#-how-it-works)
+- [🎛️ One dashboard for everything](#️-one-dashboard-for-everything)
+- [🛠️ CLI reference](#️-cli-reference)
+- [❓ FAQ](#-faq)
+- [🔎 Common questions (long-form)](#-common-questions-long-form)
+- [🤝 Contributing](#-contributing)
+- [🔒 Safety](#-safety)
+- [📄 License](#-license)
+
+---
+
 ## ⚡ Quick install
 
 ```bash
@@ -28,7 +48,130 @@ npx memorybridge init
 
 That's it. The installer auto-detects your AI tools and wires `memorybridge` into each one's MCP config. Restart your AI tool and you're done.
 
-> Currently you can run from source while we finalize the npm publish. See [Manual install](#manual-install-while-we-publish).
+> Currently you can run from source while we finalize the npm publish. See [Manual install](#-manual-install-while-we-publish).
+
+---
+
+## 📖 Step-by-step guide (first time using MemoryBridge)
+
+If you've never used an MCP server before, follow these eight steps. Total time: ~5 minutes.
+
+### Step 1 — Prerequisites
+
+You need:
+
+- **Node.js 20 or newer** ([download](https://nodejs.org/)) — check with `node --version`
+- **At least one MCP-compatible AI tool installed**: Claude Code, Cursor, Google Antigravity, Windsurf, Gemini CLI, Continue.dev, VS Code (+ Copilot), or Claude Desktop
+
+That's it. No Docker, no databases, no API keys.
+
+### Step 2 — Install MemoryBridge
+
+**Option A — npx (recommended, when published to npm):**
+
+```bash
+npx memorybridge init
+```
+
+**Option B — Clone and build from source (right now):**
+
+```bash
+git clone https://github.com/IamRamgarhia/memorybridge.git
+cd memorybridge
+npm install
+npm run build
+node dist/cli.js init
+```
+
+You'll see output like:
+
+```
+=== MemoryBridge Init ===
+
+  Configured:
+    [✓] Claude Code    added    ~/.claude.json
+    [✓] Cursor         added    ~/.cursor/mcp.json
+
+  Next steps:
+    1. Restart your AI tool(s) so they pick up the MCP config.
+    2. cd into a project, then run: memorybridge add "<your first memory>"
+```
+
+### Step 3 — Restart your AI tool
+
+This is **required**. AI tools read their MCP config only on startup, so quit (fully close) and reopen Claude Code, Cursor, or whichever tool you use.
+
+### Step 4 — Verify it's working
+
+Open your AI tool, then ask:
+
+> *"What MCP tools are available to you?"*
+
+You should see **`memory_load`**, **`memory_save`**, and **`memory_search`** in the list. If you don't, run `memorybridge doctor` from your terminal — it'll diagnose the issue.
+
+### Step 5 — Use it normally (the AI saves automatically)
+
+Open any project folder in your AI tool. Tell it something durable about your project:
+
+> *"This project uses Supabase for auth instead of NextAuth. Remember that."*
+
+The AI will call `memory_save` and persist this to `.ai-memory.md` in your project folder. You can verify:
+
+```bash
+cat .ai-memory.md
+```
+
+You'll see:
+
+```markdown
+## @decisions
+- [2026-05-28] Auth chosen: Supabase over NextAuth
+```
+
+That's it — MemoryBridge is now active. **Every future session in this folder, regardless of which AI tool you use, will start by reading this file.**
+
+### Step 6 — See what you've saved
+
+Three ways to look at your memory:
+
+```bash
+memorybridge open                # opens .ai-memory.md in your default editor
+memorybridge list                # CLI listing of every entry
+memorybridge load                # exactly what the AI sees on session start
+memorybridge settings            # one-page dashboard with everything
+```
+
+### Step 7 — Tune for max token savings
+
+```bash
+memorybridge shorter             # cut AI response length (saves output tokens)
+memorybridge style 1             # jump straight to "ultra-terse" (~75% output saved)
+memorybridge savings             # see real measured + estimated savings
+memorybridge compare             # side-by-side before/after with $ math
+```
+
+Output tokens cost **5× more** than input tokens, so the style toggle is the biggest dollar saver. Start at level 3 (balanced) and tighten if you want shorter answers.
+
+### Step 8 — Roll back or uninstall anytime
+
+**Undo a bad save** (preserves every snapshot):
+
+```bash
+memorybridge undo                # restore the previous version
+memorybridge log                 # see snapshot history with timestamps
+memorybridge diff 3              # diff current vs 3 snapshots ago
+```
+
+**Uninstall cleanly** (preserves your `.ai-memory.md` files in projects):
+
+```bash
+memorybridge uninstall           # remove MemoryBridge from all MCP configs
+memorybridge uninstall --purge   # also delete ~/.memorybridge/ folder
+```
+
+After uninstalling, your project's `.ai-memory.md` files are still there — they're your data, not ours. Delete them manually if you don't want them.
+
+---
 
 ---
 
